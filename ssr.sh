@@ -109,7 +109,7 @@ libsodium_installation(){
 		echo -e "${Error} ${RedBG} libsodium download FAIL ${Font}"
 		exit 1
 	fi
-	tar xf libsodium-1.0.17.tar.gz && cd libsodium-1.0.17
+	tar zxf libsodium-1.0.17.tar.gz && cd libsodium-1.0.17
 	./configure && make -j2 && make install
 	if [[ $? -ne 0 ]]; then 
 		echo -e "${Error} ${RedBG} libsodium install FAIL ${Font}"
