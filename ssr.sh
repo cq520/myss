@@ -320,11 +320,9 @@ SSR_installation(){
 	libsodium_installation
 	
 	cd ${shadowsocks_install_folder} && cd ${shadowsocks}
-		wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz
-	if [[ ! -f ${shadowsocks_folder}/shadowsocks.tar.gz ]]; then
-		echo -e "${Error} ${RedBG} shadowsocks download FAIL ${Font}"
-		exit 1
-	fi
+	wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz
+	
+
 	tar xf shadowsocks.tar.gz && cd shadowsocks
 	
 	cd shadowsocks && cp apiconfig.py userapiconfig.py && cp config.json user-config.json
