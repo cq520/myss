@@ -104,7 +104,7 @@ development_tools_installation(){
 }
 libsodium_installation(){
 	mkdir -p ${libsodium_folder} && cd ${libsodium_folder}
-	wget https://github.com/cq520/myss/blob/master/libsodium-1.0.17.tar.gz
+	wget https://raw.githubusercontent.com/cq520/myss/master/libsodium-1.0.17.tar.gz
 	if [[ ! -f ${libsodium_folder}/libsodium-1.0.17.tar.gz ]]; then
 		echo -e "${Error} ${RedBG} libsodium download FAIL ${Font}"
 		exit 1
@@ -320,7 +320,7 @@ SSR_installation(){
 	libsodium_installation
 	
 	cd ${shadowsocks_install_folder} && cd ${shadowsocks}
-		wget https://github.com/cq520/myss/blob/master/shadowsocks.tar.gz
+		wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz
 	if [[ ! -f ${shadowsocks_folder}/shadowsocks.tar.gz ]]; then
 		echo -e "${Error} ${RedBG} shadowsocks download FAIL ${Font}"
 		exit 1
