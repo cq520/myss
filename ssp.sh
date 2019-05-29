@@ -71,7 +71,7 @@ unzip ss-panel-v3-mod_Uim-dev.zip
 cd ss-panel-v3-mod_Uim-dev
 mv * .[^.]* /www/wwwroot/$website/
 cd ..
-rm -rf dev.zip ss-panel-v3-mod_Uim-dev/
+rm -rf ss-panel-v3-mod_Uim-dev.zip ss-panel-v3-mod_Uim-dev/
 echo -e "${Info} 下载解压处理程序源码已完成"
 sleep 1
 ##处理php函数
