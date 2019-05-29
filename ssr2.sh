@@ -98,9 +98,10 @@ install_centos_ssr(){
 	./configure && make -j2 && make install
 	echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 	ldconfig
+	cd /root
 	wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz "/root/shadowsocks"
 	tar xf shadowsocks.tar.gz && cd shadowsocks
-	cd /root/shadowsocks
+	
 	chkconfig supervisord on
 	#第一次安装
 	python_test
@@ -150,7 +151,6 @@ install_ubuntu_ssr(){
 	cd /root
 	wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz "/root/shadowsocks"
 	tar xf shadowsocks.tar.gz && cd shadowsocks
-	cd shadowsocks
 	pip install -r requirements.txt
 	chmod +x *.sh
 	# 配置程序
