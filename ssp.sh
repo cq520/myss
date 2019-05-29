@@ -67,7 +67,7 @@ sleep 1
 ##下载解压拷贝源码
 echo -e "${Info} 正在下载解压处理程序源码"
 wget -N --no-check-certificate "https://raw.githubusercontent.com/cq520/myss/master/ss-panel-v3-mod_Uim-dev.zip"
-unzip dev.zip
+unzip ss-panel-v3-mod_Uim-dev.zip
 cd ss-panel-v3-mod_Uim-dev
 mv * .[^.]* /www/wwwroot/$website/
 cd ..
