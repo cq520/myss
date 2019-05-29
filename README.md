@@ -9,8 +9,7 @@ wget https://raw.githubusercontent.com/cq520/myss/master/ssp.sh && chmod +x ssp.
 
 wget https://raw.githubusercontent.com/cq520/myss/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh install
 
-chmod +x ssr.sh
+或者
 
-./ssr.sh install
-
+wget https://raw.githubusercontent.com/cq520/myss/master/ssr2.sh && chmod +x ssr2.sh && bash ssr2.sh
 
