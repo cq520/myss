@@ -102,11 +102,7 @@ install_centos_ssr(){
 	wget https://raw.githubusercontent.com/cq520/myss/master/shadowsocks.tar.gz "/root/shadowsocks"
 	tar xf shadowsocks.tar.gz && rm -rf shadowsocks.tar.gz && cd shadowsocks
 	
-	chkconfig supervisord on
-	#第一次安装
-	python_test
-	pip install requests
-	pip install -r requirements.txt -i $pyAddr	
+	chkconfig supervisord on	
 	#第一次安装
         cd /root/shadowsocks
         pip install --upgrade setuptools
