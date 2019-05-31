@@ -107,28 +107,16 @@ install_centos_ssr(){
 	python_test
 	pip install requests
 	pip install -r requirements.txt -i $pyAddr	
-	#第二次检测是否安装成功
-	if [ -z "`python -c 'import requests;print(requests)'`" ]; then
-	    
-		pip install -r requirements.txt #用自带的源试试再装一遍
-	fi
-	#第三次检测是否成功
-	if [ -z "`python -c 'import requests;print(requests)'`" ]; then
-		mkdir python && cd python
-		git clone https://github.com/lizhongnian/urllib3.git && cd urllib3
-		python setup.py install && cd ..
-		git clone https://github.com/nakagami/CyMySQL.git && cd CyMySQL
-		python setup.py install && cd ..
-		git clone https://github.com/requests/requests.git && cd requests
-		python setup.py install && cd ..
-		git clone https://github.com/pyca/pyopenssl.git && cd pyopenssl
-		python setup.py install && cd ..
-		git clone https://github.com/cedadev/ndg_httpsclient.git && cd ndg_httpsclient
-		python setup.py install && cd ..
-		git clone https://github.com/etingof/pyasn1.git && cd pyasn1
-		python setup.py install && cd ..
-		rm -rf python
-	fi	
+	#第一次安装
+        cd /root/shadowsocks
+        pip install --upgrade setuptools
+        pip install -r requirements.txt
+	
+	systemctl stop firewalld.service
+	systemctl disable firewalld.service
+	cd /root/shadowsocks
+	cp apiconfig.py userapiconfig.py
+	cp config.json user-config.json
 	systemctl stop firewalld.service
 	systemctl disable firewalld.service
 	cd /root/shadowsocks
