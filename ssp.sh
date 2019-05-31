@@ -213,4 +213,4 @@ echo -e "${Info} 默认生成的管理员用户名：admin 密码为admin"
 echo -e "${Info} 如果打不开站点，请到宝塔面板中软件管理重启nginx和php7.1"
 echo -e "${Info} 自定义配置，请打开/www/wwwroot/$website/config/.config.php进行修改"
 echo "--------------------------------------------------------------------------------"
-echo " php /www/wwwroot/$website/xcat createAdmin"
+php /www/wwwroot/$website/xcat createAdmin
